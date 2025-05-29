@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-lt-installed="true">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+	<link rel="icon" type="image/png" href="assets/logo.png">
+    <title>&lt;DeiTsuki&#47;&gt;</title>
+   	<style>
+		:root {
+			--primary-color: #195EFF;
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body {
+			color: #fff;
+			background-color: #0E0E0E;
+			font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+			font-optical-sizing: auto;
+			font-style: normal;
+		}
+		.container {
+			padding: 24px 16px 0px;
+		}
+		.header {
+
+			text-align: center;
+			margin-bottom: 48px;
+		}
+		.brand h1 {
+			padding-bottom: 20px;
+		}
+		.brand h1 span {
+			color: var(--primary-color);
+		}
+		.brand img {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+		.subtitle {
+			margin-bottom: 16px;
+		}
+		.game-container {
+			gap: 16px;
+			max-width: 450px;
+			margin: 0 auto;
+            height: 700px;
+		}
+		.button {
+			color: #fff;
+			cursor: pointer;
+			text-align: center;
+			transition: 0.3s ease-in-out;
+		}
+		.button:hover {
+		    color: var(--primary-color);
+		}
+	</style>
+</head>
+<body>
+    <div class="container">
+       	<div class="header">
+         	<div class="brand">
+           		<h1><span>&lt;</span>404<span>&#47;&gt;</span></h1>
+         	</div>
+         	<div class="subtitle">
+				I think are ... <br> lost. <br> <br>
+                <a href="/" class="button">back to home</a>
+         	</div>
+       	</div>
+       	<div class="game-container" id="game-container"></div>
+    </div>
+
+    <script src="library/phaser.js"></script>
+    <script src="assets/404/main.js" defer></script>
+</body>
+</html>
