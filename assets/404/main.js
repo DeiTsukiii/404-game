@@ -98,6 +98,13 @@ function create() {
 
         platforms.push(p);
 
+        this.platformInterval = setInterval(() => {
+            if (p.body) {
+                p.y += 1;
+                p.refreshBody();
+            }
+        }, 30)
+
         this.physics.add.collider(player, p, (player, platform) => {
             const playerBottom = player.getBounds().bottom;
             const platformTop = platform.getBounds().top;
@@ -235,14 +242,12 @@ function update() {
                 btn: 'Replay'
             }
             scoreTot = 0;
+            clearInterval(this.platformInterval);
             this.scene.restart();
         }
     }
 
     platforms.forEach((platform) => {
-        platform.y += 0.5;
-        platform.refreshBody();
-
         if (platform.y >= player.y + 300 || platform.y >= ground.y - 100) {
             this.tweens.add({
                 targets: platform,
